@@ -1,9 +1,20 @@
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<div id="content"></div>
+<html>
 
-<script>
-    $.get('../webClipper/GraalVM and heap size of the native image - how to set it.md', function(response, status, xhr){
-        $("#content").html(marked(response));
-    });
-</script>
+<head>
+    <meta charset="utf-8" />
+    <title>Marked in the browser</title>
+</head>
+
+<body>
+    <div id="content"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <div id="content"></div>
+    <script>
+        $.get('./webClipper/GraalVM and heap size of the native image - how to set it.md', function (response, status, xhr) {
+            $("#content").html(marked(response));
+        });
+    </script>
+</body>
+
+</html>
